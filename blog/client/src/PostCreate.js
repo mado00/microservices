@@ -12,6 +12,7 @@ export default () => {
     });
     // after submit set title clear
     setTitle('');
+    window.location.reload();
   };
 
   return (
