@@ -14,6 +14,7 @@ app.get('/posts', (req, res) => {
   res.send(posts);
 });
 
+// everytime we create new post
 app.post('/posts', async (req, res) => {
   // 4 random bytes
   const id = randomBytes(4).toString('hex');
@@ -24,6 +25,7 @@ app.post('/posts', async (req, res) => {
     title
   };
 
+  // send create post event to event-bus
   await axios.post('http://localhost:4005/events', {
     type: 'PostCreated',
     data: {

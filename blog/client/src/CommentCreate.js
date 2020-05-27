@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default ({ postId}) => {
   const [content, setContent] = useState('');
-  console.log(postId)
+  // console.log(postId)
 
   const onSubmit = async (e) => {
     e.preventDefault();
